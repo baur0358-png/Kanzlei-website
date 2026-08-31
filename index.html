@@ -1,0 +1,721 @@
+Hier ist der Code noch einmal übersichtlich im Textformat:
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechtsanwaltskanzlei BAUR | Singen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0b131e;
+            --bg-card: #0f1926;
+            --bg-light: #f7f9fc;
+            --primary: #0f172a;
+            --gold: #c5a059;
+            --gold-hover: #b08d46;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --text-white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .logo-text, .quote-text {
+            font-family: 'Cinzel', serif;
+        }
+
+        header {
+            background-color: var(--bg-dark);
+            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            color: var(--text-white);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+
+        .btn-header {
+            background-color: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--text-white);
+            padding: 0.5rem 1.2rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-header:hover {
+            background-color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .hero {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #111c2e 100%);
+            color: var(--text-white);
+            padding: 4rem 1.5rem 5rem 1.5rem;
+            text-align: left;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--text-white);
+            padding: 1rem 1.8rem;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-white);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 1rem 1.8rem;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.15);
+        }
+
+        .section-about {
+            padding: 4rem 1.5rem;
+            background-color: #ffffff;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .profile-name {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .profile-title {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .about-heading {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .quote-box {
+            border-left: 2px solid var(--gold);
+            padding-left: 1.5rem;
+            margin: 2.5rem 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--primary);
+            line-height: 1.5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        .section-expertise {
+            padding: 4rem 1.5rem;
+            background-color: var(--bg-light);
+        }
+
+        .expertise-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cards-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .card-icon {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-contact {
+            padding: 4rem 1.5rem;
+            background-color: #ffffff;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-details {
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-item strong {
+            color: var(--primary);
+            display: block;
+        }
+
+        .contact-form {
+            background-color: var(--bg-light);
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            background: #ffffff;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .section-legal {
+            padding: 4rem 1.5rem;
+            background-color: #ffffff;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-block h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-block p, .legal-block ul {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .legal-block ul li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .legal-block ul li::before {
+            content: "›";
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            padding: 3rem 1.5rem;
+            text-align: left;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-address {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .footer-copy {
+            color: #475569;
+            font-size: 0.75rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">BAUR</a>
+        <a href="#kontakt" class="btn-header">TERMIN</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <span class="hero-subtitle">Rechtsanwaltskanzlei Baur</span>
+            <h1>Kompetent.<br>Persönlich.<br><span>Durchsetzungsstark.</span></h1>
+            <p>Ihre verlässliche Vertretung in Singen und Umgebung. Wir setzen uns mit juristischer Präzision und strategischer Weitsicht für Ihr Recht ein.</p>
+            <div class="hero-buttons">
+                <a href="#kontakt" class="btn-primary">ERSTGESPRÄCH VEREINBAREN</a>
+                <a href="#ueber-mich" class="btn-secondary">KANZLEI ENTDECKEN</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ueber-mich" class="section-about">
+        <div class="about-container">
+            <img src="profil.jpg" alt="Michael Baur" class="profile-img">
+            <h2 class="profile-name">Michael Baur</h2>
+            <p class="profile-title">Rechtsanwalt</p>
+
+            <span class="section-label">Über die Kanzlei</span>
+            <h3 class="about-heading">Juristische Expertise mit persönlicher Betreuung</h3>
+            <p class="about-text">Die Rechtsanwaltskanzlei BAUR steht für fundierte juristische Expertise und persönliche Betreuung. In unserer Kanzlei in Singen verbinden wir langjährige Erfahrung mit einem modernen Verständnis anwaltlicher Dienstleistung.</p>
+            
+            <div class="quote-box">
+                „Recht haben und Recht bekommen sollte keine Frage des Zufalls sein, sondern das Ergebnis strategischer und fundierter Arbeit.“
+            </div>
+
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Jahre Erfahrung</div>
+                </div>
+                <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Mandantenfokus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rechtsgebiete" class="section-expertise">
+        <div class="expertise-container">
+            <span class="section-label">Expertise</span>
+            <h2 class="about-heading">Unsere Rechtsgebiete</h2>
+            <p class="about-text">Spezialisierte Beratung für Ihre individuellen rechtlichen Herausforderungen.</p>
+
+            <div class="cards-list">
+                <div class="card">
+                    <div class="card-icon">⚖️</div>
+                    <h3>Zivilrecht</h3>
+                    <p>Durchsetzung und Abwehr von zivilrechtlichen Ansprüchen, Schadensersatz und allgemeines Vertragsrecht.</p>
+                    <a href="#kontakt" class="card-link">MEHR ERFAHREN &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📄</div>
+                    <h3>Vertragsrecht</h3>
+                    <p>Prüfung, Gestaltung und Verhandlung von Verträgen aller Art zur Absicherung Ihrer Interessen.</p>
+                    <a href="#kontakt" class="card-link">MEHR ERFAHREN &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3>Arbeitsrecht</h3>
+                    <p>Beratung und Vertretung von Arbeitnehmern und Arbeitgebern bei Kündigungen, Abmahnungen und Vertragsgestaltung.</p>
+                    <a href="#kontakt" class="card-link">MEHR ERFAHREN &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👨‍👩‍👧</div>
+                    <h3>Familienrecht</h3>
+                    <p>Einfühlsame und kompetente Begleitung bei Scheidung, Unterhalt und Sorgerechtsangelegenheiten.</p>
+                    <a href="#kontakt" class="card-link">MEHR ERFAHREN &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🚗</div>
+                    <h3>Verkehrsrecht</h3>
+                    <p>Unfallregulierung, Bußgeldangelegenheiten und Verkehrsstrafrecht zur Wahrung Ihrer Mobilität.</p>
+                    <a href="#kontakt" class="card-link">MEHR ERFAHREN &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Wirtschaftsrecht</h3>
+                    <p>Rechtliche Beratung für Unternehmen von der Gründung bis zur Nachfolgeplanung.</p>
+                    <a href="#kontakt" class="card-link">MEHR ERFAHREN &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section-contact">
+        <div class="contact-container">
+            <span class="section-label">Kontakt aufnehmen</span>
+            <h2 class="about-heading">Wir nehmen uns Zeit für Ihr Anliegen</h2>
+            <p class="about-text">Vereinbaren Sie einen Termin für ein erstes Beratungsgespräch.</p>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    📍 <div><strong>Kanzlei Singen</strong>Keltenstraße 12, 78224 Singen, Deutschland</div>
+                </div>
+                <div class="contact-item">
+                    📞 <div><strong>Telefon</strong>+49 (0) 7731 123 456</div>
+                </div>
+                <div class="contact-item">
+                    ✉️ <div><strong>E-Mail</strong>baur0358@gmail.com</div>
+                </div>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>E-Mail</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefon (Optional)</label>
+                    <input type="tel">
+                </div>
+                <div class="form-group">
+                    <label>Nachricht</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">NACHRICHT SENDEN</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="impressum" class="section-legal">
+        <div class="legal-container">
+            <span class="section-label">Rechtliches</span>
+            <h2 class="about-heading">Impressum</h2>
+
+            <div class="legal-block">
+                <h3>Angaben gemäß § 5 TMG</h3>
+                <p>Michael Baur<br>BAUR Rechtsanwaltskanzlei<br>Keltenstraße 12<br>78224 Singen, Deutschland</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>Kontakt</h3>
+                <p>E-Mail: baur0358@gmail.com</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>Berufsbezeichnung & Zuständige Kammer</h3>
+                <p>Berufsbezeichnung: Rechtsanwalt<br>Staat der Verleihung: Deutschland</p>
+                <p>Zuständige Rechtsanwaltskammer:<br>Rechtsanwaltskammer Freiburg<br>Eisenbahnstraße 66<br>79098 Freiburg, Deutschland</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>Berufshaftpflichtversicherung</h3>
+                <p>Allianz Versicherungs-AG<br>Königinstraße 28<br>80802 München, Deutschland</p>
+                <p>Räumlicher Geltungsbereich: Gesamtes EU-Gebiet sowie die Staaten des Abkommens über den Europäischen Wirtschaftsraum (EWR).</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>Berufsrechtliche Regelungen</h3>
+                <p>Es gelten folgende berufsrechtliche Regelungen für die Tätigkeit als Rechtsanwalt:</p>
+                <ul>
+                    <li>BRAO (Bundesrechtsanwaltsordnung)</li>
+                    <li>BORA (Berufsordnung für Rechtsanwälte)</li>
+                    <li>FAO (Fachanwaltsordnung)</li>
+                    <li>RVG (Rechtsanwaltsvergütungsgesetz)</li>
+                    <li>Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)</li>
+                </ul>
+                <p>Die Regelungen sind über die Bundesrechtsanwaltskammer abrufbar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="datenschutz" class="section-legal" style="background-color: var(--bg-light);">
+        <div class="legal-container">
+            <span class="section-label">Rechtliches</span>
+            <h2 class="about-heading">Datenschutzerklärung</h2>
+            <p class="about-text">Informationen über die Erhebung und Verarbeitung personenbezogener Daten auf unserer Website.</p>
+
+            <div class="legal-block">
+                <h3>01. Verantwortlicher</h3>
+                <p>Michael Baur, BAUR Rechtsanwaltskanzlei, Keltenstraße 12, 78224 Singen, Deutschland. E-Mail: baur0358@gmail.com</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>02. Allgemeine Hinweise</h3>
+                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>03. Zugriff auf die Website</h3>
+                <p>Der Provider der Seiten erhäbt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>04. Kontaktaufnahme per E-Mail</h3>
+                <p>Wenn Sie uns per E-Mail kontaktieren, wird Ihre E-Mail inklusive der von Ihnen dort angegebenen personenbezogenen Daten zwecks Bearbeitung der Anfrage bei uns gespeichert.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>05. Kontaktformular</h3>
+                <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular zwecks Bearbeitung gespeichert.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>06. Cookies</h3>
+                <p>Unsere Internetseiten verwenden teilweise so genannte Cookies. Diese dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>07. Hosting</h3>
+                <p>Wir hosten unsere Website bei einem externen Dienstleister (GitHub Pages). Die personenbezogenen Daten werden auf den Servern des Hosts gespeichert.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>08. Eingesetzte externe Dienste</h3>
+                <p>Wir setzen auf unserer Website externe Dienste ein, um die Funktionalität zu erweitern. Die Anbieter dieser Dienste können Ihre IP-Adresse erfassen.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>09. Speicherdauer</h3>
+                <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>10. Ihre Rechte (Art. 15-21 DSGVO)</h3>
+                <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>11. Beschwerderecht</h3>
+                <p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu.</p>
+            </div>
+
+            <div class="legal-block">
+                <h3>12. Datensicherheit</h3>
+                <p>Wir verwenden technische und organisatorische Sicherheitsmaßnahmen, um Ihre Daten gegen Manipulation, Verlust und unberechtigten Zugriff zu schützen.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">B A U R</div>
+            <div class="footer-address">Rechtsanwaltskanzlei BAUR — Keltenstraße 12, 78224 Singen</div>
+
+            <div class="footer-nav">
+                <a href="#impressum">Impressum</a>
+                <a href="#datenschutz">Datenschutz</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="#kontakt">Anfahrt</a>
+            </div>
+
+            <div class="footer-copy">
+                &copy; 2026 RECHTSANWALTSKANZLEI BAUR | SINGEN
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
