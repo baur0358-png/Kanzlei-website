@@ -107,169 +107,80 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        .lang-en { display: none; }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pt-20">
-<nav class="fixed top-0 left-0 right-0 bg-surface/90 backdrop-blur z-50 border-b border-outline-muted/30 h-20 flex items-center">
-<div class="max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-<a class="font-display-lg text-headline-md text-primary" href="index.html">BAUR</a>
-<div class="flex items-center gap-4">
-<button class="font-label-md text-primary font-bold cursor-pointer transition-colors" id="lang-btn-de" onclick="switchLanguage('de')">DE</button>
-<span class="text-outline-muted">|</span>
-<button class="font-label-md text-on-surface-variant hover:text-primary cursor-pointer transition-colors" id="lang-btn-en" onclick="switchLanguage('en')">EN</button>
-</div>
-</div>
-</nav>
+<!-- TopNavBar: Suppressed because Legal Notice is a utility/secondary page, prioritizing the content canvas. -->
 <main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-section-padding">
 <header class="mb-20 pb-10 border-b border-outline-muted/30">
 <div class="inline-block bg-secondary-fixed text-on-secondary-fixed px-3 py-1 mb-6 text-label-md font-label-md">
-<span class="lang-de">RECHTLICHE HINWEISE</span>
-<span class="lang-en">LEGAL NOTICE</span>
-</div>
-<h1 class="font-display-lg text-display-lg text-primary mb-6">
-<span class="lang-de">Impressum</span>
-<span class="lang-en">Legal Notice / Imprint</span>
-</h1>
+                RECHTLICHE HINWEISE
+            </div>
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Impressum</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-<span class="lang-de">Informationen gemäß § 5 TMG sowie Angaben zur berufsrechtlichen Regelung unserer Kanzlei.</span>
-<span class="lang-en">Information in accordance with § 5 TMG and details regarding the professional regulations of our law firm.</span>
-</p>
+                Informationen gemäß § 5 TMG sowie Angaben zur berufsrechtlichen Regelung unserer Kanzlei.
+            </p>
 </header>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- Table of Contents (Sticky Sidebar) -->
 <aside class="md:col-span-4 hidden md:block">
 <div class="sticky top-32 border border-outline-muted p-8 bg-surface">
-<h3 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider border-b border-outline-muted/30 pb-4">
-<span class="lang-de">Inhaltsverzeichnis</span>
-<span class="lang-en">Table of Contents</span>
-</h3>
+<h3 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider border-b border-outline-muted/30 pb-4">Inhaltsverzeichnis</h3>
 <nav class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-<a class="block hover:text-secondary transition-colors lang-de" href="#angaben">Angaben gemäß § 5 TMG</a>
-<a class="block hover:text-secondary transition-colors lang-en" href="#angaben">Information acc. to § 5 TMG</a>
-<a class="block hover:text-secondary transition-colors lang-de" href="#kontakt">Kontakt</a>
-<a class="block hover:text-secondary transition-colors lang-en" href="#kontakt">Contact</a>
-<a class="block hover:text-secondary transition-colors lang-de" href="#vertreten">Vertreten durch</a>
-<a class="block hover:text-secondary transition-colors lang-en" href="#vertreten">Represented by</a>
-<a class="block hover:text-secondary transition-colors lang-de" href="#berufsrecht">Berufsbezeichnung und berufsrechtliche Regelungen</a>
-<a class="block hover:text-secondary transition-colors lang-en" href="#berufsrecht">Professional Title and Regulations</a>
-<a class="block hover:text-secondary transition-colors lang-de" href="#streitschlichtung">Verbraucherstreitbeilegung</a>
-<a class="block hover:text-secondary transition-colors lang-en" href="#streitschlichtung">Consumer Dispute Resolution</a>
+<a class="block hover:text-secondary transition-colors" href="#angaben">Angaben gemäß § 5 TMG</a>
+<a class="block hover:text-secondary transition-colors" href="#kontakt">Kontakt</a>
+<a class="block hover:text-secondary transition-colors" href="#vertreten">Vertreten durch</a>
+<a class="block hover:text-secondary transition-colors" href="#berufsrecht">Berufsbezeichnung und berufsrechtliche Regelungen</a>
+<a class="block hover:text-secondary transition-colors" href="#streitschlichtung">Verbraucherstreitbeilegung</a>
 </nav>
 </div>
 </aside>
 <!-- Content Area -->
 <div class="md:col-span-8 space-y-16">
 <section class="scroll-mt-32" id="angaben">
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
-<span class="lang-de">Angaben gemäß § 5 TMG</span>
-<span class="lang-en">Information according to § 5 TMG</span>
-</h2>
-<div class="font-body-lg text-body-lg text-on-surface space-y-2">
-<p>BAUR Rechtsanwaltskanzlei</p>
-<p>Keltenstraße 12</p>
-<p>
-<span class="lang-de">78224 Singen, Deutschland</span>
-<span class="lang-en">78224 Singen, Germany</span>
-</p>
-</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Angaben gemäß § 5 TMG</h2>
+<div class="font-body-lg text-body-lg text-on-surface space-y-2"><p>BAUR Rechtsanwaltskanzlei</p><p>Keltenstraße 12</p><p>78224 Singen, Deutschland</p></div>
 </section>
 <section class="scroll-mt-32" id="kontakt">
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
-<span class="lang-de">Kontakt</span>
-<span class="lang-en">Contact</span>
-</h2>
-<div class="font-body-lg text-body-lg text-on-surface space-y-2 bg-surface-container-low p-6 border border-outline-muted/50">
-<p>
-<span class="lang-de">Telefon: +49 7731 847 2395</span>
-<span class="lang-en">Phone: +49 7731 847 2395</span>
-</p>
-<p>
-<span class="lang-de">Telefax: +49 7731 847 2396</span>
-<span class="lang-en">Fax: +49 7731 847 2396</span>
-</p>
-<p>
-<span class="lang-de">E-Mail: baur0358@gmail.com</span>
-<span class="lang-en">Email: baur0358@gmail.com</span>
-</p>
-</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Kontakt</h2>
+<div class="font-body-lg text-body-lg text-on-surface space-y-2 bg-surface-container-low p-6 border border-outline-muted/50"><p>Telefon: +49 7731 847 2395</p><p>Telefax: +49 7731 847 2396</p><p>E-Mail: baur0358@gmail.com</p></div>
 </section>
 <section class="scroll-mt-32" id="vertreten">
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
-<span class="lang-de">Vertreten durch</span>
-<span class="lang-en">Represented by</span>
-</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Vertreten durch</h2>
 <div class="font-body-lg text-body-lg text-on-surface space-y-2">
 <p>Michael Baur</p>
 </div>
 </section>
 <section class="scroll-mt-32" id="berufsrecht">
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
-<span class="lang-de">Berufsbezeichnung und berufsrechtliche Regelungen</span>
-<span class="lang-en">Professional Title and Professional Regulations</span>
-</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
 <div class="prose max-w-none font-body-md text-body-md text-on-surface-variant space-y-4">
-<p class="lang-de">
+<p>
                             Berufsbezeichnung: Rechtsanwalt/Rechtsanwältin (verliehen in der Bundesrepublik Deutschland)
                         </p>
-<p class="lang-en">
-                            Professional Title: Rechtsanwalt/Rechtsanwältin (Attorney at Law, conferred in the Federal Republic of Germany)
-                        </p>
-<p class="lang-de">Zuständige Kammer: Rechtsanwaltskammer Freiburg, Bertoldstraße 44, 79098 Freiburg</p>
-<p class="lang-en">Competent Chamber: Freiburg Bar Association (Rechtsanwaltskammer Freiburg), Bertoldstraße 44, 79098 Freiburg, Germany</p>
-<p class="lang-de">
+<p>Zuständige Kammer: Rechtsanwaltskammer Freiburg, Bertoldstraße 44, 79098 Freiburg</p>
+<p>
                             Es gelten folgende berufsrechtliche Regelungen:
                         </p>
-<p class="lang-en">
-                            The following professional regulations apply:
-                        </p>
 <ul class="list-disc pl-5 space-y-2 text-on-surface">
-<li>
-<span class="lang-de">Bundesrechtsanwaltsordnung (BRAO)</span>
-<span class="lang-en">Federal Lawyers' Act (Bundesrechtsanwaltsordnung - BRAO)</span>
-</li>
-<li>
-<span class="lang-de">Berufsordnung (BORA)</span>
-<span class="lang-en">Professional Code of Conduct for Lawyers (Berufsordnung für Rechtsanwälte - BORA)</span>
-</li>
-<li>
-<span class="lang-de">Fachanwaltsordnung (FAO)</span>
-<span class="lang-en">Specialist Lawyers' Regulations (Fachanwaltsordnung - FAO)</span>
-</li>
-<li>
-<span class="lang-de">Rechtsanwaltsvergütungsgesetz (RVG)</span>
-<span class="lang-en">Lawyers' Remuneration Act (Rechtsanwaltsvergütungsgesetz - RVG)</span>
-</li>
-<li>
-<span class="lang-de">Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)</span>
-<span class="lang-en">Code of Conduct for European Lawyers (CCBE)</span>
-</li>
+<li>Bundesrechtsanwaltsordnung (BRAO)</li>
+<li>Berufsordnung (BORA)</li>
+<li>Fachanwaltsordnung (FAO)</li>
+<li>Rechtsanwaltsvergütungsgesetz (RVG)</li>
+<li>Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE)</li>
 </ul>
-<p class="text-sm mt-4 lang-de">
-                            Die Regelungen können bei der Bundesrechtsanwaltskammer unter <a class="text-secondary hover:underline" href="http://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank">http://www.brak.de/fuer-anwaelte/berufsrecht/</a> eingesehen werden.
-                        </p>
-<p class="text-sm mt-4 lang-en">
-                            These regulations can be viewed at the Federal Bar Association at <a class="text-secondary hover:underline" href="https://www.brak.de/en/for-lawyers/professional-regulations/" target="_blank">https://www.brak.de/en/for-lawyers/professional-regulations/</a>.
+<p class="text-sm mt-4">
+                            Die Regelungen können bei der Bundesrechtsanwaltskammer unter <a class="text-secondary hover:underline" href="#">http://www.brak.de/fuer-anwaelte/berufsrecht/</a> eingesehen werden.
                         </p>
 </div>
 </section>
 <section class="scroll-mt-32" id="streitschlichtung">
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
-<span class="lang-de">Verbraucher­streit­beilegung/Universal­schlichtungs­stelle</span>
-<span class="lang-en">Consumer Dispute Resolution/Universal Arbitration Board</span>
-</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Verbraucher­streit­beilegung/Universal­schlichtungs­stelle</h2>
 <div class="font-body-md text-body-md text-on-surface-variant space-y-4">
-<p class="lang-de">
+<p>
                             Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                         </p>
-<p class="lang-en">
-                            We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
-                        </p>
-<p class="lang-de">
-                            Plattform der EU-Kommission zur Online-Streitbeilegung: <a class="text-secondary hover:underline" href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>
-</p>
-<p class="lang-en">
-                            EU Commission platform for online dispute resolution: <a class="text-secondary hover:underline" href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>
+<p>
+                            Plattform der EU-Kommission zur Online-Streitbeilegung: <a class="text-secondary hover:underline" href="#">https://ec.europa.eu/consumers/odr</a>
 </p>
 </div>
 </section>
@@ -281,62 +192,27 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto px-margin-desktop">
 <div class="space-y-6">
 <a class="font-display-lg text-headline-md text-secondary block" href="index.html">BAUR</a>
-<p class="font-body-md text-body-md text-on-primary/70 max-w-xs lang-de">
+<p class="font-body-md text-body-md text-on-primary/70 max-w-xs">
                     Rechtsberatung auf höchstem Niveau. Tradition trifft auf moderne Expertise.
-                </p>
-<p class="font-body-md text-body-md text-on-primary/70 max-w-xs lang-en">
-                    Legal advice at the highest level. Tradition meets modern expertise.
                 </p>
 </div>
 <div class="space-y-4">
-<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest lang-de">Kanzlei</h4>
-<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest lang-en">Law Firm</h4>
+<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest">Kanzlei</h4>
 <nav class="flex flex-col space-y-2">
-<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors lang-de" href="index.html">Startseite</a>
-<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors lang-en" href="index.html">Home</a>
-<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors lang-de" href="kontakt.html">Kontakt</a>
-<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors lang-en" href="kontakt.html">Contact</a>
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors" href="index.html">Startseite</a>
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors" href="kontakt.html">Kontakt</a>
 </nav>
 </div>
 <div class="space-y-4">
-<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest lang-de">Rechtliches</h4>
-<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest lang-en">Legal</h4>
+<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest">Rechtliches</h4>
 <nav class="flex flex-col space-y-2">
-<a class="font-body-md text-body-md text-secondary-fixed hover:text-secondary-fixed-dim transition-colors lang-de" href="impressum.html">Impressum</a>
-<a class="font-body-md text-body-md text-secondary-fixed hover:text-secondary-fixed-dim transition-colors lang-en" href="impressum.html">Legal Notice</a>
-<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors lang-de" href="datenschutz.html">Datenschutz</a>
-<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors lang-en" href="datenschutz.html">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary-fixed hover:text-secondary-fixed-dim transition-colors" href="impressum.html">Impressum</a>
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-secondary-fixed-dim transition-colors" href="datenschutz.html">Datenschutz</a>
 </nav>
 </div>
 </div>
 <div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center opacity-100 hover:opacity-80 transition-opacity">
-<p class="font-body-md text-sm text-on-primary/50 lang-de">© 2024 BAUR. Alle Rechte vorbehalten.</p>
-<p class="font-body-md text-sm text-on-primary/50 lang-en">© 2024 BAUR. All rights reserved.</p>
+<p class="font-body-md text-sm text-on-primary/50">© 2024 BAUR. Alle Rechte vorbehalten.</p>
 </div>
 </footer>
-<script>
-    function switchLanguage(lang) {
-        document.documentElement.lang = lang;
-        const deElements = document.querySelectorAll('.lang-de');
-        const enElements = document.querySelectorAll('.lang-en');
-        const btnDe = document.getElementById('lang-btn-de');
-        const btnEn = document.getElementById('lang-btn-en');
-        
-        if (lang === 'en') {
-            deElements.forEach(el => el.style.display = 'none');
-            enElements.forEach(el => el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block');
-            btnDe.classList.remove('font-bold', 'text-primary');
-            btnDe.classList.add('text-on-surface-variant', 'hover:text-primary');
-            btnEn.classList.remove('text-on-surface-variant', 'hover:text-primary');
-            btnEn.classList.add('font-bold', 'text-primary');
-        } else {
-            deElements.forEach(el => el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block');
-            enElements.forEach(el => el.style.display = 'none');
-            btnEn.classList.remove('font-bold', 'text-primary');
-            btnEn.classList.add('text-on-surface-variant', 'hover:text-primary');
-            btnDe.classList.remove('text-on-surface-variant', 'hover:text-primary');
-            btnDe.classList.add('font-bold', 'text-primary');
-        }
-    }
-</script>
 </body></html>
